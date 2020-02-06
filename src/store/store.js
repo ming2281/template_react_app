@@ -5,7 +5,11 @@ import logger from 'redux-logger'
 
 import {reducer} from '../reducers/reducers'
 
+/**
+ * 创建全局的store对象, 让每个组件都能看见store对象
+ */
 function createMyStore() {
+    /// 获取环境变量
     const env = 'dev';
 
     if (env === 'dev') {
